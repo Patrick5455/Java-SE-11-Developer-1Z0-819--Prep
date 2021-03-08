@@ -1,4 +1,4 @@
-###Compile Java Program
+### Compile Java Program
 Compile classes with the javac compiler
 
 - The `-classpath` or `-cp` parameter points to locations of other classes that may be required to compile your code
@@ -12,7 +12,7 @@ e.g
 
 > javac -cp /project/classes -d /project/classes /project/sources/demos/Whatever.java
 
-###Execute Java Program
+### Execute Java Program
 
 Execute program using java executable Java Virtual Machine (JVM).
 - Specify `-classpath` or `-cp` to point to folders where your classes are located
