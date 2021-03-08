@@ -2,7 +2,7 @@
 
 `Lesson 1`: Introduction to Java
 
-`Lesson 2`: Primitice Types, Operators, and Flow Control Statements
+`Lesson 2`: Primitive Types, Operators, and Flow Control Statements
 
 `Lesson 3`: Text, Date, Time, and Numeric Objects
 
