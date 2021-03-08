@@ -1,1 +1,1 @@
-### Course OutLine
+### Course Outline
