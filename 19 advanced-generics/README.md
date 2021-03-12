@@ -45,8 +45,9 @@ Generics are often used with Collection API. Consider the ffg collection example
     
 - When `wildcard <?> is applied (representing an unknown type)`:
 - - Elements are accessed just like in a collection of Objects
-- - Effectively it's a read-only collection
+- - Effectively it's a read-only collection e.g __List<?> listOfUnknownType = listOfProducts__
 - - No object in Java is of unknown type, so no values (except null) can be added to such a collection    
     
+
     
 
