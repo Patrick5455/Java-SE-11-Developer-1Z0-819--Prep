@@ -115,11 +115,13 @@ Collections and generics wildcard best practices:
     - Use `<? extends UpperBoundType>` _convariant, read-only_ genetics
     - This allows type-safe retrieval of values from the collection
 
-- Avoid using raw types
+- `Avoid using raw types`: 
+Using raw types leads to things like _unsafe operation_, _heap pollution problems_ so just avoid them all together. 
+  They are still there for backward compatibility though.
 
-> public void addFood(List<? super Food> o, Food i) {o.add(i);} // consumer
-> public void addDrink(List<? super Drink> o, Drink i) {o.add(i);} //consumer
-> public void processOrder(List<? extends Product> o) {o.stream().forEach(p -> p.prepare());} //producer
+> public void addFood(List<? super Food> o, Food i) {o.add(i);} // consumer collection
+> public void addDrink(List<? super Drink> o, Drink i) {o.add(i);} //consumer collection
+> public void processOrder(List<? extends Product> o) {o.stream().forEach(p -> p.prepare());} //producer collection
 > public void addProductAndProcessOrder(List<Product> o, product i) {
  o.add(f)
 > o.stream().forEach(p->p.prepared());
