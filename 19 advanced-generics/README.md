@@ -100,4 +100,30 @@ e.g `List<Drink>`will lead to compiler error.
 #### Been able to assign any of the sub types using `<? extends SuperType>`or super types using `<? super Type>` is known as `contra-variant` behaviour
 
 
+#### Collections and Generics Best Practices
+Collections and generics wildcard best practices:
+
+- When class hierarchy (super/sub types) is irrelevant
+    - Use specific type `<SpecificType>` invariant, read-write generics
+    - This allows type-safe read-write access to the collection.
+    
+- When collection is a consumer of values and your code needs to be type-hierarchy aware 
+    - Use `<? super LowerBoundType>` _contravariant, writable_ generics
+    - This allows type-safe addition of new values to the collection.
+    
+- When collection is a producer of values and your code needs to be type-hierarchy aware
+    - Use `<? extends UpperBoundType>` _convariant, read-only_ genetics
+    - This allows type-safe retrieval of values from the collection
+
+- Avoid using raw types
+
+> public void addFood(List<? super Food> o, Food i) {o.add(i);} // consumer
+> public void addDrink(List<? super Drink> o, Drink i) {o.add(i);} //consumer
+> public void processOrder(List<? extends Product> o) {o.stream().forEach(p -> p.prepare());} //producer
+> public void addProductAndProcessOrder(List<Product> o, product i) {
+ o.add(f)
+> o.stream().forEach(p->p.prepared());
+    }
+
+
 
