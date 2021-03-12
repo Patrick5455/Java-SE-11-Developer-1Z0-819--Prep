@@ -12,7 +12,7 @@
 Collection API uses generics `and generics are designed to be invariant`. 
 > From the perspective of generics, an array list of food is not compatible with an array list
 > of product even though a type of Food extends Product. The compiler will prevent you
-> froom doing such assignment (below). The compiler will say a list of subtype is not the same
+> from doing such assignment (below). The compiler will say a list of subtype is not the same
 > as the list of a supertype
 
 `List<Product> products = new ArrayListL<Food>();` - _compiler error indicating incompatible types: `ArrayList<Food> cannot be converted to List<Product>`_
@@ -64,6 +64,7 @@ Upper bounded wildcard `<? extends ParentType>` allows use of subtype collection
 e.g
 
 > public void setProducts(List<Product> products)  {}
+
 > public void setProductAndSubTypes (List<? extends Product> products) {}
 
 
@@ -120,8 +121,11 @@ Using raw types leads to things like _unsafe operation_, _heap pollution problem
   They are still there for backward compatibility though.
 
 > public void addFood(List<? super Food> o, Food i) {o.add(i);} // consumer collection
+
 > public void addDrink(List<? super Drink> o, Drink i) {o.add(i);} //consumer collection
+
 > public void processOrder(List<? extends Product> o) {o.stream().forEach(p -> p.prepare());} //producer collection
+
 > public void addProductAndProcessOrder(List<Product> o, product i) {
  o.add(f)
 > o.stream().forEach(p->p.prepared());
