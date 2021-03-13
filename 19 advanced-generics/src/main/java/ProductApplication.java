@@ -5,13 +5,14 @@ import service.ProductService;
 
 import java.util.List;
 
-public class ProductApplication {
+public class ProductApplication{
 
     public static void main(String[] args) {
 
         Product product = new Product();
         Food food = new Food();
         Drink drink = new Drink();
+
 
 
         ProductService productService = ProductService.getProductService();

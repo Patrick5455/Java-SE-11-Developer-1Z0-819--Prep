@@ -132,4 +132,12 @@ Using raw types leads to things like _unsafe operation_, _heap pollution problem
     }
 
 
+#### Erasure at Compilation Time
+When the compiler translates generics into java bytecodes, it removes the type-parameter section
+and _replaces the type parameters with actual types._ 
+This process is known as `erasure`. By default, all generic types are replaced with type Object.
+So the compiled version of the compiled code has only one copy.
+This is quite different from similiar mechanisms in other programming languages, such as C++'s templates, in 
+which a _separate copy of the source code is generated and compiled for every type passed as arguments in a generic method for instance_.
+In a generic method, the benefits become more apparent when you place restrictions on the type parameters.
 
