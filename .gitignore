@@ -1,1 +1,5 @@
 /prep/oracle-java-learning/target/
+
+/prep/jetbrains-java-learning/target/
+/.idea/
+*.iml
