@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/IZO-819.iml" filepath="$PROJECT_DIR$/.idea/IZO-819.iml" />
+      <module fileurl="file://$PROJECT_DIR$/prep/jetbrains/jetbrains.iml" filepath="$PROJECT_DIR$/prep/jetbrains/jetbrains.iml" />
+      <module fileurl="file://$PROJECT_DIR$/prep/oracle-java-learning/oracle-java-learning.iml" filepath="$PROJECT_DIR$/prep/oracle-java-learning/oracle-java-learning.iml" />
+      <module fileurl="file://$PROJECT_DIR$/prep/prep.iml" filepath="$PROJECT_DIR$/prep/prep.iml" />
+    </modules>
+  </component>
+</project>
